@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://kit.fontawesome.com/bb1d94d34f.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --1st-colour: #0a0124;
+        }
+
+        @media screen and (min-width: 600px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .active {
+                color: #2173c0;
+            }
+
+            /* scroll hiding starts here */
+            ::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            /* scroll hiding ends here  */
+
+            /* Nav Bar Starts Here  */
+
+            .navbar {
+                width: 100vw;
+                height: 10vh;
+                background-color: var(--1st-colour);
+                color: white;
+                font-family: "sans-serif", poppins;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                z-index: 10;
+                transition: background-color 0.6s ease-in-out;
+
+
+            }
+
+            .nav-border {
+                border-bottom: 1px solid #2173c0;
+            }
+
+            .navbar .title {
+                margin-left: 30px;
+                font-size: 3vh;
+            }
+
+            .navbar .links ul {
+                margin-right: 30px;
+            }
+
+            .navbar .links li {
+                list-style: none;
+                display: inline;
+                margin: 13px;
+                cursor: pointer;
+                transition: color 150ms ease-in;
+
+            }
+
+
+
+            .navbar .links li:hover {
+                color: #2173c0;
+
+            }
+
+            /* Nav Bar Ends Here  */
+
+            /* main section starts here */
+
+            /* home page starts here  */
+
+            .home {
+                /* background-color: var(--1st-colour); */
+                background: linear-gradient(to bottom, #0a0124, #0c0a06);
+
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .left-area {
+                color: white;
+                font-size: 30px;
+                font-family: "sans-sarif", poppins;
+                margin-left: 100px;
+            }
+
+            .left-area h1 {
+                margin: 0px 8px auto auto;
+
+
+            }
+
+            .reachOut {
+                --color: #2ccf83;
+                padding: 0.8em 1.7em;
+                background-color: transparent;
+                border-radius: .3em;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: .5s;
+                font-weight: 400;
+                font-size: 17px;
+                border: 1px solid;
+                font-family: inherit;
+                text-transform: uppercase;
+                color: var(--color);
+                z-index: 1;
+            }
+
+            .reachOut::before,
+            .reachOut::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                border-radius: 50%;
+                z-index: -1;
+                background-color: var(--color);
+                transition: 1s ease;
+            }
+
+            .reachOut::before {
+                top: -1em;
+                left: -1em;
+            }
+
+            .reachOut::after {
+                left: calc(100% + 1em);
+                top: calc(100% + 1em);
+            }
+
+            .reachOut:hover::before,
+            .reachOut:hover::after {
+                height: 410px;
+                width: 410px;
+            }
+
+            .reachOut:hover {
+                color: rgb(10, 25, 30);
+            }
+
+            .reachOut:active {
+                filter: brightness(.8);
+            }
+
+
+
+            .aboutMe {
+                --color: #ffffff;
+                padding: 0.8em 1.7em;
+                background-color: #2173c0;
+                border-radius: .3em;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: .5s;
+                font-weight: 400;
+                font-size: 17px;
+                border: 1px solid #2173c0;
+                font-family: inherit;
+                text-transform: uppercase;
+                color: var(--color);
+                z-index: 1;
+            }
+
+            .aboutMe::before,
+            .aboutMe::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                border-radius: 50%;
+                z-index: -1;
+                background-color: #2ccf83;
+
+                transition: 1s ease;
+            }
+
+            .aboutMe::before {
+                top: -1em;
+                left: -1em;
+            }
+
+            .aboutMe::after {
+                left: calc(100% + 1em);
+                top: calc(100% + 1em);
+            }
+
+            .aboutMe:hover::before,
+            .aboutMe:hover::after {
+                height: 410px;
+                width: 410px;
+
+            }
+
+            .aboutMe:hover {
+                color: rgb(10, 25, 30);
+                border: 1px solid #2ccf83;
+            }
+
+            .aboutMe:active {
+                filter: brightness(.8);
+            }
+
+            .right-area {
+                margin-right: 100px;
+
+            }
+
+            .right-area img {
+                width: 332px;
+                transition-duration: 200ms;
+                transform-origin: center;
+                transition-timing-function: ease-in-out;
+
+            }
+
+            .right-area img:hover {
+                scale: 1.05;
+            }
+
+            /* home page ends here  */
+
+            /* about page starts here  */
+
+            .about {
+                background-color: #0c0a06;
+                width: 100vw;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+                font-family: "sans-serif", poppins;
+                color: white;
+
+            }
+
+            .aboutHeading {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .about h1 {
+                display: inline;
+            }
+
+            .t2 {
+                color: #2173c0;
+            }
+
+            .about h2 {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .about p {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .about img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .about p {
+                margin: 0 100px;
+            }
+
+            .about button {
+                margin-top: 20px;
+            }
+
+            /* about page ends here  */
+
+            /* education page starts here  */
+
+            .education {
+                background-color: #0c0a06;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: "sans-serif", poppins;
+                color: white;
+            }
+
+            .educationHeading {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .education h1 {
+                display: inline;
+            }
+
+
+
+            .education h2 {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .eduContents {
+                display: flex;
+                flex-direction: row;
+                margin-left: 100px;
+                margin-right: 100px;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+
+
+            }
+
+            .education .card {
+                border: 2px solid #2173c0;
+                border-radius: 3px;
+                margin: 0px 30px;
+                height: 100px;
+                width: 500px;
+                padding: 8px;
+
+            }
+
+
+
+            .education .card h3 {
+                margin: 0px !important;
+                font-size: 1rem;
+                color: #2173c0;
+
+            }
+
+            .education .card h2 {
+                margin: 0px !important;
+                font-size: 1.25rem;
+
+
+            }
+
+            .education .card p {
+                margin: 0px !important;
+                font-size: 0.88rem;
+
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+
+            .eduRight {
+                border-left: 3px solid #2173c0;
+            }
+
+            .eduRight .card::before {
+                content: "";
+                background-color: #2173c0;
+                position: absolute;
+                left: calc(50vw - 7px);
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                transform: translateY(-135px);
+            }
+
+            .eduLeft .card::after {
+                content: "";
+                background-color: #2173c0;
+                position: absolute;
+                left: calc(50vw - 7px);
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                transform: translateY(3px);
+            }
+
+            .education .extraDot::after {
+                content: "";
+                background-color: #2173c0;
+                position: absolute;
+                left: calc(50vw - 7px);
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                transform: translateY(3px);
+            }
+
+
+            /* education page ends here  */
+
+            /* skills page starts here */
+
+            .skills {
+                background-color: #0c0a06;
+                width: 100vw;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: "sans-serif", poppins;
+                color: white;
+            }
+
+            .skillHeading {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .skills h1 {
+                display: inline;
+            }
+
+
+
+            .skills h2 {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .skillContents {
+                display: flex;
+                flex-direction: row;
+                margin-left: 100px;
+                margin-right: 100px;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 20px;
+
+
+            }
+
+            .skills .cardInner {
+                border: 2px solid #2173c0;
+                border-radius: 3px;
+                margin: 10px 30px;
+                height: 80px;
+                width: 500px;
+                padding: 8px;
+                transition: 200ms ease-in-out;
+
+
+            }
+
+            .skills .cardInner:hover {
+                scale: 1.03;
+
+
+            }
+
+            .skills .card h3 {
+                margin: 0px !important;
+                font-size: 1rem;
+                color: #2173c0;
+
+            }
+
+            .skills .card h2 {
+                margin: 0px !important;
+                font-size: 1.25rem;
+
+
+            }
+
+            .skills .card p {
+                margin: 0px !important;
+                font-size: 0.88rem;
+
+            }
+
+
+            .skillRight {
+                border-left: 3px solid #2173c0;
+            }
+
+            .skillRight .card::before {
+                content: "";
+                background-color: #2173c0;
+                position: absolute;
+                left: calc(50vw - 7px);
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                transform: translateY(-14px);
+            }
+
+            .skills .extraDot::after {
+                content: "";
+                background-color: #2173c0;
+                position: absolute;
+                left: calc(50vw - 7px);
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                transform: translateY(-10px);
+            }
+
+
+            /* skills page ends here  */
+
+            /* prjects page starts here  */
+
+            .projects {
+                background-color: #0c0a06;
+                width: 100vw;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: "sans-serif", poppins;
+                color: white;
+            }
+
+            .projectHeading {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .projects h1 {
+                display: inline;
+            }
+
+
+
+            /* projects page ends here  */
+
+            /* contact page starts here  */
+
+
+            .contact {
+                background: linear-gradient(to bottom, #0c0a06, #0a0124, #0c0a06);
+
+                width: 100vw;
+                height: 40vh;
+                display: flex;
+                ;
+                flex-direction: column;
+                align-items: center;
+                font-family: "sans-serif", poppins;
+                color: white;
+                border-top: 2px solid #2173c027;
+
+
+            }
+
+            .contactHeading {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .contact h1 {
+                display: inline;
+            }
+
+            .contactContents {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .contactInfo {
+                margin: 20px 70px;
+
+            }
+
+            .contactInfo P {
+                margin-top: 5px;
+            }
+
+            .contact a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .social i {
+                font-size: 1.6rem;
+                margin: 5px;
+                transform: translateY(20px);
+            }
+
+            .whatsapp img {
+                width: 190px;
+                margin-top: 30px
+            }
+
+
+
+            footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #0c0a06;
+                color: white;
+                width: 100vw;
+                height: 40px;
+                font-family: "sans-serif", poppins;
+            }
+
+            /* contact herepage ends   */
+        }
+
+        /* making it resposive starts here  */
+
+        @media screen and (max-width: 1362px) {
+            .eduContents {
+                margin-left: 20px;
+                margin-right: 20px;
+
+            }
+
+            .skillContents {
+                margin-left: 20px;
+                margin-right: 20px;
+
+
+            }
+
+
+
+
+        }
+
+        @media screen and (max-width: 1202px) {
+            .eduContents .hidden {
+                display: none;
+
+
+            }
+
+            .eduContents {
+                flex-direction: column;
+            }
+
+            .eduRight .card {
+                margin-top: 10px;
+            }
+
+            .eduLeft .card {
+                margin-top: 10px;
+            }
+
+            .eduRight .card::before {
+                display: none;
+            }
+
+            .eduLeft .card::after {
+                display: none;
+            }
+
+            .education .extraDot::after {
+                display: none;
+            }
+
+            .eduRight {
+                border-left: 0px;
+            }
+
+            .skillRight .card::before {
+                display: none;
+
+            }
+
+            .skills .extraDot::after {
+                display: none;
+
+            }
+
+            .skillRight {
+                border-left: 0;
+            }
+
+
+
+
+
+
+        }
+
+        @media screen and (max-width: 1199px) {
+            .skills {
+                height: 130vh;
+
+            }
+
+
+        }
+
+        @media screen and (max-width: 1171px) {
+
+            .home .left-area {
+                font-size: 23px;
+            }
+
+
+        }
+
+        @media screen and (max-width: 1024px) {
+            #role {
+                font-size: 44px;
+
+            }
+
+
+        }
+
+        @media screen and (max-width: 1003px) {
+            .home {
+                flex-direction: column-reverse;
+                justify-content: center;
+
+            }
+
+            .home .left-area {
+                margin-bottom: 20px;
+                width: 500px;
+                display: flex;
+                justify-content: safe;
+
+
+
+
+            }
+
+            .home .right-area {
+                margin: 30px auto;
+            }
+
+
+        }
+
+        @media screen and (max-width: 924px) {
+            .navbar .links {
+                display: none;
+            }
+
+            .contactInfo {
+                margin: 20px 0;
+
+            }
+
+        }
+
+        /* for mobile  */
+
+        @media screen and (max-width: 599px) {}
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar Starts Here -->
+
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="title">
+                    <h3>
+                        Moddassir Ajaz
+                    </h3>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li id="home" class="homeBtn active">Home</li>
+                        <li id="about" class="aboutBtn">About Me</li>
+                        <li id="education" class="educationBtn">Education</li>
+                        <li id="skills">Skills</li>
+                        <li id="projects">Projects</li>
+                        <li id="contact" class="contactBtn">Contact Me</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- navbar ends here  -->
+    <!-- Main Section Starts Here -->
+    <main>
+
+        <!-- home page starts here  -->
+
+        <div class="home">
+            <div class="left-area">
+                <div class="left-inside">
+                    <p>
+                        I Am Moddassir Ajaz,
+                    </p>
+                    <h1 id="role">
+                        An Interior Designer
+                    </h1>
+                    <button class="reachOut contactBtn">Let's Talk</button>
+                    <button class="aboutMe aboutBtn">About Me</button>
+
+                </div>
+            </div>
+            <div class="right-area">
+                <img src="https://www.nicepng.com/png/full/7-78595_asian-businessman-png-professional-man-images-png.png"
+                    alt="My Image">
+
+            </div>
+        </div>
+
+        <!-- home page ends here  -->
+        <!-- about page starts here  -->
+        <div class="about">
+            <div class="aboutHeading">
+                <h1>About</h1>
+                <h1 class="t2"> Me</h1>
+            </div>
+            <img src="https://www.nicepng.com/png/full/7-78595_asian-businessman-png-professional-man-images-png.png"
+                alt="">
+            <h2>Interior Designer</h2>
+            <p>I'm Moddassir Ajaz, working as an interior designer at Solid Group Kuwait for 4 months. With a civil
+                engineering
+                background, including matriculation, ITI in draughtsman civil, and a diploma, I leverage structural and
+                architectural principles. Proficient in AutoCAD for building planning, I also use SketchUp, Excel, and
+                other tools for design. My role blends architectural planning with interior design, creating both
+                visually appealing and functional spaces.</p>
+            <button class="aboutMe educationBtn">Read More</button>
+        </div>
+        <!-- about page ends here  -->
+
+        <!-- education page starts here  -->
+
+        <div class="education">
+            <div class="educationHeading">
+                <h1>My</h1>
+                <h1 class="t2"> Education</h1>
+            </div>
+            <div class="eduContents">
+                <div class="eduLeft">
+                    <div class="card">
+                        <h3>2016</h3>
+                        <h2>Matriculation</h2>
+                        <p>Successfully completed Matriculation from Bihar School Examination Board with a good result.
+                        </p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>2016</h3>
+                        <h2>Matriculation</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio fugit reprehenderit
+                            pariatur, magni ad!</p>
+                    </div>
+                    <div class="card">
+                        <h3>2019</h3>
+                        <h2>AutoCAD</h2>
+                        <p>Successfully completed AutoCAD training at CAD Centre Patna, gaining proficiency in CAD
+                            software and its applications.</p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>2016</h3>
+                        <h2>Matriculation</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio fugit reprehenderit
+                            pariatur, magni ad!</p>
+                    </div>
+
+                </div>
+
+                <div class="eduRight">
+                    <div class="card hidden">
+                        <h3>2016</h3>
+                        <h2>Matriculation</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio fugit reprehenderit
+                            pariatur, magni ad!</p>
+                    </div>
+                    <div class="card">
+                        <h3>2018</h3>
+                        <h2>ITI Draughtsman Civil</h2>
+                        <p>Successfully completed ITI Draughtsman Civil program accredited by NCVT, gaining
+                            comprehensive skills in civil drafting and design.</p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>2016</h3>
+                        <h2>Matriculation</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero optio fugit reprehenderit
+                            pariatur, magni ad!</p>
+                    </div>
+                    <div class="card extraDot">
+                        <h3>2022</h3>
+                        <h2>Diploma In Civil Engineering</h2>
+                        <p>Successfully completed Diploma in Civil Engineering from RGPV, Bhopal, marking academic
+                            culmination in the field.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- education page ends here  -->
+
+        <!-- skills page starts here -->
+
+        <div class="skills">
+            <div class="skillHeading">
+                <h1>My</h1>
+                <h1 class="t2"> Skills</h1>
+            </div>
+            <div class="skillContents">
+                <div class="skillLeft">
+                    <div class="card">
+
+                        <div class="cardInner">
+                            <h2>AutoCAD</h2>
+                            <p>Proficient in precise building planning, drafting techniques, and optimization.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="cardInner">
+                            <h2>SketchUp</h2>
+                            <p>Skilled in crafting detailed 3D models, compelling visualizations, dynamic presentations,
+                                and collaborative projects.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="cardInner">
+                            <h2>Microsoft Excel</h2>
+                            <p>Experienced in leveraging Excel for meticulous data analysis and streamlined project
+                                management.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cardInner">
+                            <h2>Interior Design</h2>
+                            <p>Knowledgeable in implementing spatial planning strategies, adept in color theory
+                                application, and adept in material selection.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skillRight">
+                    <div class="card">
+
+                        <div class="cardInner">
+                            <h2>Architectural Drafting</h2>
+                            <p>Capable of producing comprehensive architectural drawings for interior spaces with
+                                precision..</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="cardInner">
+                            <h2>Creative Problem-Solving</h2>
+                            <p>Resourceful in devising inventive solutions to intricate design challenges.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="cardInner">
+                            <h2>Project Management</h2>
+                            <p>Able to adeptly handle project budgeting, scheduling, and client liaison tasks.</p>
+                        </div>
+                    </div>
+                    <div class="card extraDot">
+
+                        <div class="cardInner">
+                            <h2>Communication</h2>
+                            <p>Fluent in English, Hindi, and Urdu, facilitating effective communication across diverse
+                                stakeholders.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- skills page ends here  -->
+
+        <!-- prject page starts here  -->
+
+        <div class="projects">
+            <div class="projectHeading">
+                <h1>My</h1>
+                <h1 class="t2"> Projects</h1>
+            </div>
+
+        </div>
+
+        <!-- project page ends here  -->
+
+        <!-- contact page starts here  -->
+
+        <div class="contact">
+            <div class="contactHeading">
+                <h1>Contact</h1>
+                <h1 class="t2"> Me</h1>
+            </div>
+            <div class="contactContents">
+                <div class="contactInfo">
+                    <a
+                        href="mailto:moddassirajaz99@gmail.com?subject=Interior%20Design%20Inquiry&body=Hi%20Moddassir,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20interior%20design%20projects%20with%20you.%0D%0A%0D%0AThank%20you,%0D%0A[Your%20Name]"><i
+                            class="fas fa-envelope"></i>
+                        Email: : moddassirajaz99@gmail.com
+                    </a>
+                    <p><a href="tel:+919006463765"><i class="fas fa-phone"></i> Phone: +91-9006463765</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: Siwan, Bihar, India</p>
+                </div>
+                <div class="social">
+                    <div class="socialIcons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="whatsapp">
+                        <a aria-label="Chat on WhatsApp"
+                            href="https://wa.me/919006463765?text=Hi%2C%20Moddassir%21%20I'm%20interested%20in%20discussing%20interior%20design%20projects%20with%20you.">
+                            <img alt="Chat on WhatsApp"
+                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4wwR22fcqhUUWZG0LejreP0x6wxj8EfX7fQyObo6XzM-iLxeaElirRILIAlS-HTRswPka-j5nRr8wI90XXaFIYsm0jFUF2sDtcYMKbJYy9UcsiqbhWqQExjuf72fBy0skws4VlDp6ZdlzWSpGF0tHenu6uYQnAbljboqQC1VAr9Io_t6PwFd-RZ0iTIhz/s320/WhatsAppButtonGreenSmall.png" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- contact page ends here  -->
+
+    </main>
+
+    <!-- Main Section Ends Here -->
+
+    <!-- footer starts here  -->
+    <footer>
+        <p>&copy; 2024 Moddassir Ajaz. All rights reserved.</p>
+    </footer>
+    <!-- footer ends here  -->
+
+    <script>
+        const navBar = document.querySelector(".navbar");
+        const aboutBtns = document.getElementsByClassName("aboutBtn");
+        const homeBtns = document.getElementsByClassName("homeBtn");
+        const educationBtns = document.getElementsByClassName("educationBtn");
+        const skillBtn = document.getElementById("skills");
+        const projectBtn = document.getElementById("projects");
+        const contactBtns = document.getElementsByClassName("contactBtn");
+
+
+        var role = document.getElementById('role');
+        var typewriter = new Typewriter(role, {
+            loop: true
+        });
+
+        typewriter.typeString('An Interior Designer')
+            .pauseFor(2500)
+            .deleteChars(17)
+            .typeString('AutoCAD Expert')
+            .pauseFor(2500)
+            .deleteChars(16)
+            .typeString(' SketchUp Expert')
+            .pauseFor(2500)
+            .start();
+
+
+        for (let i = 0; i < aboutBtns.length; i++) {
+            aboutBtns[i].addEventListener("click", function () {
+                goToAbout();
+            });
+        }
+
+        for (let i = 0; i < homeBtns.length; i++) {
+            homeBtns[i].addEventListener("click", function () {
+                goToHome();
+            });
+        }
+
+        for (let i = 0; i < educationBtns.length; i++) {
+            educationBtns[i].addEventListener("click", function () {
+                goToEducation();
+            });
+        }
+
+        skillBtn.addEventListener("click", function () {
+            goToSkills();
+        });
+
+        projectBtn.addEventListener("click", function () {
+            goToProjects();
+        });
+
+        for (let i = 0; i < contactBtns.length; i++) {
+            contactBtns[i].addEventListener("click", function () {
+                goToContact();
+            });
+        }
+
+
+
+
+
+
+        window.onscroll = function () {
+            scrollEffects();
+        };
+
+
+
+
+        function scrollEffects() {
+            if (window.scrollY > 30) {
+                navBar.classList.add("nav-border");
+            }
+            if (window.scrollY < 30) {
+                navBar.classList.remove("nav-border");
+            }
+            if (window.scrollY > window.innerHeight * 0.9) {
+                navBar.style.backgroundColor = "#0c0a06"
+                navBar.classList.remove("nav-border");
+                document.getElementById("about").classList.add("active");
+                document.getElementById("home").classList.remove("active");
+            }
+            if (window.scrollY < window.innerHeight * 0.9) {
+                navBar.style.backgroundColor = "#0a0124"
+                document.getElementById("about").classList.remove("active");
+                document.getElementById("home").classList.add("active");
+            }
+            if (window.scrollY > (window.innerHeight * 0.9) + 30) {
+                navBar.classList.add("nav-border")
+            }
+            if (window.scrollY > window.innerHeight * 1.8) {
+                navBar.classList.remove("nav-border");
+                document.getElementById("about").classList.remove("active");
+                document.getElementById("education").classList.add("active");
+
+            }
+            if (window.scrollY < window.innerHeight * 1.8) {
+                document.getElementById("education").classList.remove("active");
+
+            }
+            if (window.scrollY > (window.innerHeight * 1.8) + 30) {
+                navBar.classList.add("nav-border")
+            }
+            if (window.scrollY > window.innerHeight * 2.8) {
+                navBar.classList.remove("nav-border");
+                document.getElementById("education").classList.remove("active");
+                skillBtn.classList.add("active");
+
+
+            }
+            if (window.scrollY < window.innerHeight * 2.8) {
+                skillBtn.classList.remove("active");
+
+            }
+            if (window.scrollY > (window.innerHeight * 2.8) + 30) {
+                navBar.classList.add("nav-border")
+            }
+
+            if (window.scrollY > window.innerHeight * 3.7) {
+                navBar.classList.remove("nav-border");
+                skillBtn.classList.remove("active");
+                projectBtn.classList.add("active")
+
+
+            }
+            if (window.scrollY < window.innerHeight * 3.7) {
+                projectBtn.classList.remove("active");
+
+            }
+            if (window.scrollY > (window.innerHeight * 3.7) + 30) {
+                navBar.classList.add("nav-border");
+            }
+
+            if (window.scrollY > window.innerHeight * 4.1) {
+                projectBtn.classList.remove("active");
+                document.getElementById("contact").classList.add("active");
+
+
+            }
+            if (window.scrollY < window.innerHeight * 4.1) {
+                document.getElementById("contact").classList.remove("active");
+
+            }
+            if (window.scrollY > (window.innerHeight * 4.1) + 30) {
+                navBar.classList.add("nav-border")
+            }
+
+
+
+
+        }
+
+        function goToAbout() {
+            window.scrollTo({
+                top: window.innerHeight * 0.9,
+                behavior: "smooth"
+            });
+
+
+        }
+
+        function goToHome() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+
+        }
+
+        function goToEducation() {
+            window.scrollTo({
+                top: window.innerHeight * 1.8,
+                behavior: "smooth"
+
+            });
+
+        }
+
+        function goToSkills() {
+            window.scrollTo({
+                top: window.innerHeight * 2.8,
+                behavior: "smooth"
+            });
+        }
+
+        function goToProjects() {
+            window.scrollTo({
+                top: window.innerHeight * 3.7,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function goToContact() {
+            window.scrollTo({
+                top: (window.innerHeight * 4.1) + 40,
+                behavior: "smooth"
+            });
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
